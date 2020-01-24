@@ -2,7 +2,8 @@
 ### Заблокировать вход по выходным всем кроме `admin'ов`  
 конкретный случай вход по `ssh`
 1) проверить аутентификацию `ssh` по паролю в файле `/etc/ssh/sshd_config`  
-`PasswordAuthentication yes`
+`PasswordAuthentication yes`    
+рестарт сервиса sshd в случае изменения конфигурации    
 2) прописать в `/etc/security/time.conf`  
 `*;*;!admin1|admin2;!Wd0000-2400`   
   расшифровка   
